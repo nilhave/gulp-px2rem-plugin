@@ -30,6 +30,5 @@
 ![px](http://i.imgur.com/r0OBgmh.png) ![rem](http://i.imgur.com/uaR3WYr.png)
 
 ### 安装方法 ###
-
     npm install gulp-px2rem-plugin --save-dev
     git clone https://github.com/nilhave/gulp-px2rem-plugin.git
