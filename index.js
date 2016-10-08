@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 var through = require('through2');
 var uniqueArray = require('./lib/uniqueArray.js');
 module.exports = function(opt) {
