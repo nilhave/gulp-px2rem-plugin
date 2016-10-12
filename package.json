@@ -1,6 +1,6 @@
 {
   "name": "gulp-px2rem-plugin",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "author": "nilhave",
   "description": "px to rem",
   "keywords": "javascript, nodejs, gulp, px2rem ",
