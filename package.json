@@ -1,10 +1,10 @@
-﻿{
+{
   "name": "gulp-px2rem-plugin",
-  "version": "0.0.2",
+  "version": "0.1.4",
   "author": "nilhave",
   "description": "px to rem",
   "keywords": "javascript, nodejs, gulp, px2rem ",
-  "devDependencies": {
+  "dependencies": {
     "through2": "^2.0.1"
   }
 }

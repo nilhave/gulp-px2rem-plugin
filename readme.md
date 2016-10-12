@@ -1,4 +1,4 @@
-﻿# gulp-px2rem-plugin #
+# gulp-px2rem-plugin #
 
 将 px 转化成 rem 的 gulp 插件。
 
@@ -30,5 +30,10 @@
 ![px](http://i.imgur.com/r0OBgmh.png) ![rem](http://i.imgur.com/uaR3WYr.png)
 
 ### 安装方法 ###
+
     npm install gulp-px2rem-plugin --save-dev
-    git clone https://github.com/nilhave/gulp-px2rem-plugin.git
+### 版本更新 ###
+#### 0.1.X ####
+修改了0.0.x版本的bug，由于replace后的正则写的有误，无法全局替换。
+
+由于水平的原因，这个插件还存在一些问题，如果您发现了bug，可以联系我(nilhave@126.com)，我会尽快修改。

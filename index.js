@@ -1,6 +1,6 @@
-﻿'use strict';
+'use strict';
 var through = require('through2');
-var uniqueArray = require('./lib/uniqueArray.js');
+// var uniqueArray = require('./lib/uniqueArray.js');
 module.exports = function(opt) {
 	var width_design=640,
 		valid_num=4,
@@ -21,13 +21,18 @@ module.exports = function(opt) {
 
         var s_file=file.contents.toString(),
         	match_px=s_file.match(/:\s*\d+px/g),
-        	unique_match_px=uniqueArray(match_px);
-        for (var i = 0; i < unique_match_px.length; i++) {
-        	var i_array=unique_match_px[i],
-        		px_num=parseInt(i_array.replace(':','').replace('px','')),
+        	// unique_match_px=uniqueArray(match_px);
+        // for (var i = 0; i < unique_match_px.length; i++) {
+        // 	var i_array=unique_match_px[i],
+        // 		px_num=parseInt(i_array.replace(':','').replace('px','')),
+        // 		rem_num=px_num/width_design*pieces;
+        // 	s_file=s_file.replace(/\+i_array\+/g,':'+ new Number(rem_num).toFixed(valid_num) + 'rem');
+        // }
+        s_file=s_file.replace(/:\s*\d+px/g,function(word){
+        	var px_num=parseInt(word.replace(':','').replace('px','')),
         		rem_num=px_num/width_design*pieces;
-        	s_file=s_file.replace(i_array,':'+ new Number(rem_num).toFixed(valid_num) + 'rem');
-        }
+        	return ':'+ new Number(rem_num).toFixed(valid_num) + 'rem';
+        });
         file.contents=new Buffer(s_file);
         this.push(file);
         callback(null, file);
