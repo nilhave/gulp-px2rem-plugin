@@ -15,7 +15,7 @@
     gulp.task('default', function() {
     	gulp.src('*.css')
 			.pipe(px2rem())
-		//	.pipe(px2rem({'width_design':750,'valid_num':6,'pieces':10,'ignore_px':[1,2]}));
+		//	.pipe(px2rem({'width_design':750,'valid_num':6,'pieces':10,'ignore_px':[1,2],'ignore_selector':['.class1']}));
     });
 
 ### 参数说明 ###
@@ -23,17 +23,20 @@
 - valid_num：生成rem后的小数位数。默认值4
 - pieces：将整屏切份。默认为10，相当于10rem = width_design(设计稿宽度)
 - ignore_px：让部分px不在转换成rem。默认为空数组
+- ignore_selector：让部分选择器不在转换为rem。默认为空数组
 
 ### 附加要求 ###
 使用 rem 来布局，需要你使用 js 来动态设置 html 的 font-size 值。根据你的参数 pieces 设置，font-size = device-width / pieces。来就是说，如果手机物理像素为320，那么 font-size:32px。
 
 ### 插件效果 ###
-![](http://i.imgur.com/sthKjdk.png) ![](http://i.imgur.com/NWAoSG2.png)
+![](http://i.imgur.com/t132tBL.png) ![](http://i.imgur.com/B4vVkWi.png)
 
 ### 安装方法 ###
 
     npm install gulp-px2rem-plugin --save-dev
 ### 版本更新 ###
+#### 0.3.X ####
+增加功能。添加ignore_selector参数
 #### 0.2.X ####
 增加功能。添加ignore_px参数
 #### 0.1.X ####
