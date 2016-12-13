@@ -35,6 +35,8 @@
 
     npm install gulp-px2rem-plugin --save-dev
 ### 版本更新 ###
+#### 0.4.X ####
+修复bug。修复不能转换负数，修复不能转换属性后有多数值问题(类似margin属性)。
 #### 0.3.X ####
 增加功能。添加ignore_selector参数
 #### 0.2.X ####
