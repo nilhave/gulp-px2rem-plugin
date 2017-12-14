@@ -24,6 +24,7 @@
 - pieces：将整屏切份。默认为10，相当于10rem = width_design(设计稿宽度)
 - ignore_px：让部分px不在转换成rem。默认为空数组
 - ignore_selector：让部分选择器不在转换为rem。默认为空数组
+- if_use_flexible:是否开启flexible模式，默认不开启，如果开启的话，将不会对[data-dpr="1"]，[data-dpr="2"]，[data-dpr="3"]下面的样式作rem转换
 
 ### 附加要求 ###
 使用 rem 来布局，需要你使用 js 来动态设置 html 的 font-size 值。根据你的参数 pieces 设置，font-size = device-width / pieces。来就是说，如果手机物理像素为320，那么 font-size:32px。
@@ -35,6 +36,8 @@
 
     npm install gulp-px2rem-plugin --save-dev
 ### 版本更新 ###
+#### 0.4.1 ####
+添加flexible开关
 #### 0.4.X ####
 修复bug。修复不能转换负数，修复不能转换属性后有多数值问题(类似margin属性)。
 #### 0.3.X ####
