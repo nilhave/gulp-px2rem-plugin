@@ -22,7 +22,7 @@ module.exports = function(opt) {
     var reg=/([^\{]*)\{([^\}]*)\}/g;
     var array_style=s_file.match(reg);
     var new_array=[];
-
+    if(!array_syle) return callback(null,file);
     array_style.forEach(function(value){
       if(ignore_selector.indexOf(value.split('{')[0].replace(/(^\s*)|(\s*$)/g,'')) > -1) {
       }
